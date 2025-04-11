@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Isabel Restrepo's  SnowmanPuzzle </title>
+  <style>
+    
+    .grid-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+ 
+    .header {
+      background-color: #d0f0fd;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+   
+    .flex-puzzle {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      background-color: #fffbe7;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+      width: 430px; /* 4 x 100px + 3 x 5px gaps */
+      margin: auto;
+    }
+
+    
+    .flex-puzzle img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #aaa;
+      transition: transform 0.2s;
+    }
+
+    .flex-puzzle img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hidden piece */
+    .hidden-piece {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+
+    
+    <header class="header">
+      <h1>Isabel Restrepo's Snowman Puzzle</h1>
+      <p>Date: April 11, 2025</p>
+    </header>
+
+ 
+    <main class="puzzle-container">
+      <div class="flex-puzzle">
+        <img src="https://i.postimg.cc/02Lff5yR/First-Piece.jpg" alt="Fish Piece 1">
+        <img src="https://i.postimg.cc/XqfSx169/2.jpg" alt="Fish Piece 2">
+        <img src="https://i.postimg.cc/5t6hD2M4/3.jpg" alt="Fish Piece 3">
+        <img src="https://i.postimg.cc/CKX30pFj/4.jpg" alt="Fish Piece 4">
+
+        <img src="https://i.postimg.cc/RFtjVpF2/5.jpg" alt="Fish Piece 5">
+        <img src="https://i.postimg.cc/d3Kg7RZ3/6.jpg" alt="Fish Piece 6">
+        <img src="https://i.postimg.cc/Y21J5PTW/7.jpg" alt="Fish Piece 7">
+        <img src="https://i.postimg.cc/5NgD0C49/8.jpg" alt="Fish Piece 8">
+
+        <img src="https://i.postimg.cc/8zC9rzcR/9.jpg" alt="Fish Piece 9">
+        <img src="https://i.postimg.cc/y8r5hC3w/10.jpg" alt="Fish Piece 10">
+        <img src="https://i.postimg.cc/HLqhK02z/11.jpg" alt="Fish Piece 11">
+        <img src="https://i.postimg.cc/85L0VFXS/12.jpg" alt="Fish Piece 12">
+
+        
+        <img src="https://i.postimg.cc/Xv9JBbsg/WRONG.jpg" alt="Wrong Piece" class="hidden-piece">
+      </div>
+    </main>
+
+    
+      <p>
+        I joined this puzzle together using Flexbox. A trick piece is included in my document, but it's just hidden.
+      </p>
+    
+
+  </div>
+</body>
+</html>
+
