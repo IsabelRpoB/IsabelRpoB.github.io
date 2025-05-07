@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  animation: fadeInBody 1.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 20px 0;
+  animation: slideInTitle 1s ease-out;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  height: 150px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: opacity 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #e6f2ff;
+  color: #333;
+  z-index: 2;
+}
+
+.back {
+  background-color: #d4f4dd;
+  color: #222;
+  opacity: 0;
+}
+
+.card:hover .back {
+  opacity: 1;
+}
+
+.card:hover .front {
+  opacity: 0;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInTitle {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
